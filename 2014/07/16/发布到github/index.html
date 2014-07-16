@@ -114,12 +114,12 @@
 <p>这个静态的web网站就被部署到了github，检查一下分支是gh-pages。gh-pages是github为了web项目特别设置的分支。</p>
 <p>然后，点击”Settings”，找到GitHub Pages，提示“Your site is published at <a href="http://username.github.io/hexo”，打开网页" target="_blank" rel="external">http://username.github.io/hexo”，打开网页</a> <a href="http://username.github.io/hexo，就是我们刚刚发布的站点。" target="_blank" rel="external">http://username.github.io/hexo，就是我们刚刚发布的站点。</a></p>
 <p>打开站点后发现样式不对，因为CSS和JS的路径不对，不过没有关系。接下来，我们配置好域名，这个路径就会正确的。为了中国DNS解析，我先把域名绑定在Dnspod管理，再做跳转。</p>
-<p>首先PING或DIG域名username.github.io 获得IP,然后设置DNS解析。</p>
+<p>首先PING或DIG域名username.github.io 获得IP,然后设置DNS解析。如果使用二级域名需要在根目录下新建CNAME文件，内容为二级域名，不用HTTP开头，详情可参考github帮助。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://melface.com/2014/07/16/发布到github/" data-id="2a4us6mi9ibny8wq" class="article-share-link">Share</a>
+      <a data-url="http://melface.com/2014/07/16/发布到github/" data-id="54tj7ddgc5nd9gax" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
