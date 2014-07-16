@@ -60,6 +60,76 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-发布到github" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/07/16/发布到github/" class="article-date">
+  <time datetime="2014-07-16T06:52:41.000Z" itemprop="datePublished">Jul 16 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/07/16/发布到github/">发布到github</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>写完了文章，我们就可以发布了。要说明的一点是hexo的静态博客框架，那什么是静态博客呢？静态博客，是只包含html, javascript, css文件的网站，没有动态的脚本。虽然我们是用Node进行的开发，但博客的发布后就与Node无关了。在发布之前，我们要通过一条命令，把所有的文章都做静态化处理，就是生成对应的html, javascript, css，使得所有的文章都是由静态文件组成的。</p>
+<h2 id="静态化命令">静态化命令</h2>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>hexo generate
+</pre></td></tr></table></figure>
+
+<p>在本地目录下，会生成一个public的目录，里面包括了所有静态化的文件。</p>
+<h2 id="发布到github">发布到github</h2>
+<p>接下来，我们把这个博客发布到github。</p>
+<p>在github中创建一个项目hexo，项目地址：<a href="https://github.com/username/hexo" target="_blank" rel="external">https://github.com/username/hexo</a></p>
+<p>编辑全局配置文件：_config.yml，找到deploy的部分，设置github的项目地址。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="label">deploy:</span>
+  type: github
+  repo: git@github<span class="preprocessor">.com</span>:username/hexo<span class="preprocessor">.git</span>
+</pre></td></tr></table></figure>
+
+<p>然后，通过命令进行部署。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>hexo deploy
+</pre></td></tr></table></figure>
+
+<p>这个静态的web网站就被部署到了github，检查一下分支是gh-pages。gh-pages是github为了web项目特别设置的分支。</p>
+<p>然后，点击”Settings”，找到GitHub Pages，提示“Your site is published at <a href="http://username.github.io/hexo”，打开网页" target="_blank" rel="external">http://username.github.io/hexo”，打开网页</a> <a href="http://username.github.io/hexo，就是我们刚刚发布的站点。" target="_blank" rel="external">http://username.github.io/hexo，就是我们刚刚发布的站点。</a></p>
+<p>打开站点后发现样式不对，因为CSS和JS的路径不对，不过没有关系。接下来，我们配置好域名，这个路径就会正确的。为了中国DNS解析，我先把域名绑定在Dnspod管理，再做跳转。</p>
+<p>首先PING或DIG域名username.github.io 获得IP,然后设置DNS解析。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://melface.com/2014/07/16/发布到github/" data-id="urgbqvlc3te85wu4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-正文语法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/07/09/正文语法/" class="article-date">
@@ -117,7 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://melface.com/2014/07/09/正文语法/" data-id="bn3afyvy2l7xi9md" class="article-share-link">Share</a>
+      <a data-url="http://melface.com/2014/07/09/正文语法/" data-id="8evq5wzxrupqkpfq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
@@ -168,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://melface.com/2014/07/09/新的开始/" data-id="qgjyj6bm7xuqhfvz" class="article-share-link">Share</a>
+      <a data-url="http://melface.com/2014/07/09/新的开始/" data-id="m63skjlyn6vty5fp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
@@ -232,7 +302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://melface.com/2014/07/09/hello-world/" data-id="942ccij3ruw8wqo6" class="article-share-link">Share</a>
+      <a data-url="http://melface.com/2014/07/09/hello-world/" data-id="u3gq4o8cfti842vd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -251,7 +321,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -260,7 +330,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -278,7 +348,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07">July 2014</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07">July 2014</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -288,6 +358,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2014/07/16/发布到github/">发布到github</a>
+          </li>
         
           <li>
             <a href="/2014/07/09/正文语法/">正文Markdown语法</a>
@@ -315,9 +389,11 @@
     <div id="footer-info" class="inner">
       &copy; 2014 Melface<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <script src="http://s23.cnzz.com/z_stat.php?id=1000543007&web_id=1000543007" language="JavaScript"></script>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   

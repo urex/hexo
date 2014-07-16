@@ -3,41 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>新的开始 | Melface</title>
+  <title>发布到github | Melface</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是新的开始，我用hexo创建了第一篇文章。
-通过下面的命令，就可以创建新文章
-1
-2
-$ hexo new 新的开始
-[info] File created at ~\hexo\source\_posts\新的开始.md
-
-
-感觉非常好。">
+  <meta name="description" content="写完了文章，我们就可以发布了。要说明的一点是hexo的静态博客框架，那什么是静态博客呢？静态博客，是只包含html, javascript, css文件的网站，没有动态的脚本。虽然我们是用Node进行的开发，但博客的发布后就与Node无关了。在发布之前，我们要通过一条命令，把所有的文章都做静态化处理，就是生成对应的html, javascript, css，使得所有的文章都是由静态文件组成的。
+静">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新的开始">
-<meta property="og:url" content="http://melface.com/2014/07/09/新的开始/">
+<meta property="og:title" content="发布到github">
+<meta property="og:url" content="http://melface.com/2014/07/16/发布到github/">
 <meta property="og:site_name" content="Melface">
-<meta property="og:description" content="这是新的开始，我用hexo创建了第一篇文章。
-通过下面的命令，就可以创建新文章
-1
-2
-$ hexo new 新的开始
-[info] File created at ~\hexo\source\_posts\新的开始.md
-
-
-感觉非常好。">
+<meta property="og:description" content="写完了文章，我们就可以发布了。要说明的一点是hexo的静态博客框架，那什么是静态博客呢？静态博客，是只包含html, javascript, css文件的网站，没有动态的脚本。虽然我们是用Node进行的开发，但博客的发布后就与Node无关了。在发布之前，我们要通过一条命令，把所有的文章都做静态化处理，就是生成对应的html, javascript, css，使得所有的文章都是由静态文件组成的。
+静">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新的开始">
-<meta name="twitter:description" content="这是新的开始，我用hexo创建了第一篇文章。
-通过下面的命令，就可以创建新文章
-1
-2
-$ hexo new 新的开始
-[info] File created at ~\hexo\source\_posts\新的开始.md
-
-
-感觉非常好。">
+<meta name="twitter:title" content="发布到github">
+<meta name="twitter:description" content="写完了文章，我们就可以发布了。要说明的一点是hexo的静态博客框架，那什么是静态博客呢？静态博客，是只包含html, javascript, css文件的网站，没有动态的脚本。虽然我们是用Node进行的开发，但博客的发布后就与Node无关了。在发布之前，我们要通过一条命令，把所有的文章都做静态化处理，就是生成对应的html, javascript, css，使得所有的文章都是由静态文件组成的。
+静">
   
     <link rel="alternative" href="/atom.xml" title="Melface" type="application/atom+xml">
   
@@ -82,10 +61,10 @@ $ hexo new 新的开始
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-新的开始" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-发布到github" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/07/09/新的开始/" class="article-date">
-  <time datetime="2014-07-09T07:31:29.000Z" itemprop="datePublished">Jul 9 2014</time>
+    <a href="/2014/07/16/发布到github/" class="article-date">
+  <time datetime="2014-07-16T06:52:41.000Z" itemprop="datePublished">Jul 16 2014</time>
 </a>
     
   <div class="article-category">
@@ -100,7 +79,7 @@ $ hexo new 新的开始
         
   
     <h1 class="article-title" itemprop="name">
-      新的开始
+      发布到github
     </h1>
   
 
@@ -108,20 +87,39 @@ $ hexo new 新的开始
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
-<p>通过下面的命令，就可以创建新文章</p>
+        <p>写完了文章，我们就可以发布了。要说明的一点是hexo的静态博客框架，那什么是静态博客呢？静态博客，是只包含html, javascript, css文件的网站，没有动态的脚本。虽然我们是用Node进行的开发，但博客的发布后就与Node无关了。在发布之前，我们要通过一条命令，把所有的文章都做静态化处理，就是生成对应的html, javascript, css，使得所有的文章都是由静态文件组成的。</p>
+<h2 id="静态化命令">静态化命令</h2>
 <figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre><span class="formula">$ hexo new 新的开始
-<span class="special">[</span>info<span class="special">]</span> File created at <span class="special">~</span><span class="command">\hexo</span><span class="command">\source</span><span class="command">\_</span>posts<span class="command">\新</span>的开始.md</span>
+</pre></td><td class="code"><pre><span class="variable">$ </span>hexo generate
 </pre></td></tr></table></figure>
 
-<p>感觉非常好。</p>
+<p>在本地目录下，会生成一个public的目录，里面包括了所有静态化的文件。</p>
+<h2 id="发布到github">发布到github</h2>
+<p>接下来，我们把这个博客发布到github。</p>
+<p>在github中创建一个项目hexo，项目地址：<a href="https://github.com/username/hexo" target="_blank" rel="external">https://github.com/username/hexo</a></p>
+<p>编辑全局配置文件：_config.yml，找到deploy的部分，设置github的项目地址。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="label">deploy:</span>
+  type: github
+  repo: git@github<span class="preprocessor">.com</span>:username/hexo<span class="preprocessor">.git</span>
+</pre></td></tr></table></figure>
+
+<p>然后，通过命令进行部署。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>hexo deploy
+</pre></td></tr></table></figure>
+
+<p>这个静态的web网站就被部署到了github，检查一下分支是gh-pages。gh-pages是github为了web项目特别设置的分支。</p>
+<p>然后，点击”Settings”，找到GitHub Pages，提示“Your site is published at <a href="http://username.github.io/hexo”，打开网页" target="_blank" rel="external">http://username.github.io/hexo”，打开网页</a> <a href="http://username.github.io/hexo，就是我们刚刚发布的站点。" target="_blank" rel="external">http://username.github.io/hexo，就是我们刚刚发布的站点。</a></p>
+<p>打开站点后发现样式不对，因为CSS和JS的路径不对，不过没有关系。接下来，我们配置好域名，这个路径就会正确的。为了中国DNS解析，我先把域名绑定在Dnspod管理，再做跳转。</p>
+<p>首先PING或DIG域名username.github.io 获得IP,然后设置DNS解析。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://melface.com/2014/07/09/新的开始/" data-id="m63skjlyn6vty5fp" class="article-share-link">Share</a>
+      <a data-url="http://melface.com/2014/07/16/发布到github/" data-id="urgbqvlc3te85wu4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
@@ -132,19 +130,10 @@ $ hexo new 新的开始
     
 <nav id="article-nav">
   
-    <a href="/2014/07/09/正文语法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          正文Markdown语法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2014/07/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2014/07/09/正文语法/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">正文Markdown语法</div>
     </a>
   
 </nav>
