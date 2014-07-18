@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Melface]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://blog.melface.tk/"/>
+  <updated>2014-07-18T06:21:00.674Z</updated>
+  <id>http://blog.melface.tk/</id>
+  
+  <author>
+    <name><![CDATA[Melface]]></name>
+    
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[发布到github]]></title>
+    <link href="http://blog.melface.tk/2014/07/16/%E5%8F%91%E5%B8%83%E5%88%B0github/"/>
+    <id>http://blog.melface.tk/2014/07/16/发布到github/</id>
+    <published>2014-07-16T06:52:41.000Z</published>
+    <updated>2014-07-18T03:55:31.000Z</updated>
+    <content type="html"><![CDATA[<p>写完了文章，我们就可以发布了。要说明的一点是hexo的静态博客框架，那什么是静态博客呢？静态博客，是只包含html, javascript, css文件的网站，没有动态的脚本。虽然我们是用Node进行的开发，但博客的发布后就与Node无关了。在发布之前，我们要通过一条命令，把所有的文章都做静态化处理，就是生成对应的html, javascript, css，使得所有的文章都是由静态文件组成的。</p>
+<h2 id="静态化命令">静态化命令</h2>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>hexo generate
+</pre></td></tr></table></figure>
+
+<p>在本地目录下，会生成一个public的目录，里面包括了所有静态化的文件。</p>
+<h2 id="发布到github">发布到github</h2>
+<p>接下来，我们把这个博客发布到github。</p>
+<p>在github中创建一个项目hexo，项目地址：<a href="https://github.com/username/hexo" target="_blank" rel="external">https://github.com/username/hexo</a></p>
+<p>编辑全局配置文件：_config.yml，找到deploy的部分，设置github的项目地址。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="label">deploy:</span>
+  type: github
+  repo: git@github<span class="preprocessor">.com</span>:username/hexo<span class="preprocessor">.git</span>
+</pre></td></tr></table></figure>
+
+<p>然后，通过命令进行部署。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>hexo deploy
+</pre></td></tr></table></figure>
+
+<p>这个静态的web网站就被部署到了github，检查一下分支是gh-pages。gh-pages是github为了web项目特别设置的分支。</p>
+<p>然后，点击”Settings”，找到GitHub Pages，提示“Your site is published at <a href="http://username.github.io/hexo”，打开网页" target="_blank" rel="external">http://username.github.io/hexo”，打开网页</a> <a href="http://username.github.io/hexo，就是我们刚刚发布的站点。" target="_blank" rel="external">http://username.github.io/hexo，就是我们刚刚发布的站点。</a></p>
+<p>打开站点后发现样式不对，因为CSS和JS的路径不对，不过没有关系。接下来，我们配置好域名，这个路径就会正确的。为了中国DNS解析，我先把域名绑定在Dnspod管理，再做跳转。</p>
+<p>首先PING或DIG域名username.github.io 获得IP,然后设置DNS解析。如果使用二级域名需要在根目录下新建CNAME文件，内容为二级域名，不用HTTP开头，详情可参考github帮助。<br>由于每次执行deploy的时候，gh-pages分支所有的文件都会被覆盖，所以我们最好在source目录下创建这个CNAME文件，这样每次部署就不用动手创建了。</p>
+]]></content>
+    
+    
+      <category term="hexo" scheme="http://blog.melface.tk/tags/hexo/"/>
+    
+      <category term="nodejs" scheme="http://blog.melface.tk/tags/nodejs/"/>
+    
+      <category term="IT" scheme="http://blog.melface.tk/categories/IT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[正文Markdown语法]]></title>
+    <link href="http://blog.melface.tk/2014/07/09/%E6%AD%A3%E6%96%87%E8%AF%AD%E6%B3%95/"/>
+    <id>http://blog.melface.tk/2014/07/09/正文语法/</id>
+    <published>2014-07-09T07:54:25.000Z</published>
+    <updated>2014-07-09T09:15:07.000Z</updated>
+    <content type="html"><![CDATA[<p>hexo对于一些有特殊标记 文字块，做了特殊的定义。<br> <a href="http://jianshu.io/p/1e402922ee32" target="_blank" rel="external">markdown入门指南</a></p>
+<h2 id="引用">引用</h2>
+<p>&gt;Every interaction is both precious and an opportunity to delight.</p>
+<h6 id="页面效果">页面效果</h6>
+<blockquote>
+<p>Every interaction is both precious and an opportunity to delight.</p>
+</blockquote>
+<hr>
+<h2 id="代码块">代码块</h2>
+<p>```{bash}<br>.compact([0, 1, false, 2, ‘’, 3]);<br>=&gt; [1, 2, 3]<br>```</p>
+<h6 id="页面效果-1">页面效果</h6>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>.compact([<span class="number">0</span>, <span class="number">1</span>, <span class="keyword">false</span>, <span class="number">2</span>, ‘’, <span class="number">3</span>]);
+=&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+</pre></td></tr></table></figure>
+
+<hr>
+<h2 id="链接">链接</h2>
+<p>[粉丝日志](<a href="http://www.xxx.com" target="_blank" rel="external">http://www.xxx.com</a>)</p>
+<h6 id="页面效果-2">页面效果</h6>
+<p><a href="http://www.xxx.com" target="_blank" rel="external">粉丝日志</a></p>
+<hr>
+<h2 id="图片">图片</h2>
+<p>![这是一张图片](<a href="http://www.xxx.com/sp.png" target="_blank" rel="external">http://www.xxx.com/sp.png</a>)</p>
+<h6 id="页面效果-3">页面效果</h6>
+<p><img src="http://www.kinspring.com/imgs/favicon.png" alt="这是一张图片"></p>
+]]></content>
+    
+    
+      <category term="hexo" scheme="http://blog.melface.tk/tags/hexo/"/>
+    
+      <category term="nodejs" scheme="http://blog.melface.tk/tags/nodejs/"/>
+    
+      <category term="IT" scheme="http://blog.melface.tk/categories/IT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[新的开始]]></title>
+    <link href="http://blog.melface.tk/2014/07/09/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/"/>
+    <id>http://blog.melface.tk/2014/07/09/新的开始/</id>
+    <published>2014-07-09T07:31:29.000Z</published>
+    <updated>2014-07-09T07:59:06.000Z</updated>
+    <content type="html"><![CDATA[<p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
+<p>通过下面的命令，就可以创建新文章</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="formula">$ hexo new 新的开始
+<span class="special">[</span>info<span class="special">]</span> File created at <span class="special">~</span><span class="command">\hexo</span><span class="command">\source</span><span class="command">\_</span>posts<span class="command">\新</span>的开始.md</span>
+</pre></td></tr></table></figure>
+
+<p>感觉非常好。</p>
+]]></content>
+    
+    
+      <category term="hexo" scheme="http://blog.melface.tk/tags/hexo/"/>
+    
+      <category term="nodejs" scheme="http://blog.melface.tk/tags/nodejs/"/>
+    
+      <category term="IT" scheme="http://blog.melface.tk/categories/IT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://blog.melface.tk/2014/07/09/hello-world/"/>
+    <id>http://blog.melface.tk/2014/07/09/hello-world/</id>
+    <published>2014-07-09T07:11:29.000Z</published>
+    <updated>2014-07-16T09:29:58.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/tommy351/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2>
+<h3 id="Create_a_new_post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ hexo new <span class="string">"My New Post"</span>
+</pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ hexo server
+</pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ hexo generate
+</pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ hexo deploy
+</pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    
+      <category term="hexo" scheme="http://blog.melface.tk/tags/hexo/"/>
+    
+      <category term="nodejs" scheme="http://blog.melface.tk/tags/nodejs/"/>
+    
+      <category term="IT" scheme="http://blog.melface.tk/categories/IT/"/>
+    
+  </entry>
+  
+</feed>
