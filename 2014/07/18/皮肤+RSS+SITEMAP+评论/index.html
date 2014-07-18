@@ -4,20 +4,15 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>新的开始 | Melface</title>
+    <title>皮肤+RSS+SITEMAP+评论 | Melface</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Melface">
     
-    <meta name="description" content="这是新的开始，我用hexo创建了第一篇文章。
-通过下面的命令，就可以创建新文章
-1
-2
-$ hexo new 新的开始
-[info] File created at ~\hexo\source\_posts\新的开始.md
-
-
-感觉非常好。">
+    <meta name="description" content="替换皮肤
+打开hexo的皮肤列表页面，你可以找到很多的皮肤，网页地址： https://github.com/tommy351/hexo/wiki/Themes
+评论系统
+我使用了多说评论系统，地址：http://duoshuo.com/注册一个账号获得shortname，配置到_config.ym">
     
     
     
@@ -71,14 +66,14 @@ $ hexo new 新的开始
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/07/09/新的开始/" title="新的开始" itemprop="url">新的开始</a>
+      <a href="/2014/07/18/皮肤+RSS+SITEMAP+评论/" title="皮肤+RSS+SITEMAP+评论" itemprop="url">皮肤+RSS+SITEMAP+评论</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://blog.melface.tk/about" title="Melface" target="_blank" itemprop="author">Melface</a>
 		
   <p class="article-time">
-    <time datetime="2014-07-09T07:31:29.000Z" itemprop="datePublished">Published Jul 9 2014</time>
+    <time datetime="2014-07-18T06:45:36.000Z" itemprop="datePublished">Published Jul 18 2014</time>
     
   </p>
 </header>
@@ -88,19 +83,36 @@ $ hexo new 新的开始
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#替换皮肤"><span class="toc-number">1.</span> <span class="toc-text">替换皮肤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#评论系统"><span class="toc-number">2.</span> <span class="toc-text">评论系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RSS订阅"><span class="toc-number">3.</span> <span class="toc-text">RSS订阅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sitemap站长地图"><span class="toc-number">4.</span> <span class="toc-text">Sitemap站长地图</span></a></li></ol>
 		
 		</div>
 		
-		<p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
-<p>通过下面的命令，就可以创建新文章</p>
+		<h2 id="替换皮肤">替换皮肤</h2>
+<p>打开hexo的皮肤列表页面，你可以找到很多的皮肤，网页地址： <a href="https://github.com/tommy351/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/tommy351/hexo/wiki/Themes</a></p>
+<h2 id="评论系统">评论系统</h2>
+<p>我使用了多说评论系统，地址：<a href="http://duoshuo.com/" target="_blank" rel="external">http://duoshuo.com/</a><br>注册一个账号获得shortname，配置到_config.yml文件</p>
 <figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
 2
-</pre></td><td class="code"><pre><span class="formula">$ hexo new 新的开始
-<span class="special">[</span>info<span class="special">]</span> File created at <span class="special">~</span><span class="command">\hexo</span><span class="command">\source</span><span class="command">\_</span>posts<span class="command">\新</span>的开始.md</span>
+3
+</pre></td><td class="code"><pre><span class="attribute">duoshuo</span>: <span class="string"></span>
+  <span class="attribute">enable</span>: <span class="string">true</span>
+  <span class="attribute">short_name</span>: <span class="string">shorname</span>
 </pre></td></tr></table></figure>
 
-<p>感觉非常好。</p>
+<p>另还可使用disqus,地址：<a href="http://disqus.com/" target="_blank" rel="external">http://disqus.com/</a></p>
+<h2 id="RSS订阅">RSS订阅</h2>
+<p>这个功能非常简单，因为已经有人写好了插件，我们只要安装插件就行了。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ npm install hexo<span class="attribute">-generator</span><span class="attribute">-feed</span>
+</pre></td></tr></table></figure>
+
+<h2 id="Sitemap站长地图">Sitemap站长地图</h2>
+<p>同样是一条命令，就可以完成。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>npm install hexo<span class="attribute">-generator</span><span class="attribute">-sitemap</span>
+</pre></td></tr></table></figure>
+
+<p><br><br>至此，一个博客网站基本就建成啦！</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -121,7 +133,7 @@ $ hexo new 新的开始
 
 <div class="article-share" id="share">
 
-  <div data-url="http://blog.melface.tk/2014/07/09/新的开始/" data-title="新的开始 | Melface" data-tsina="1081487290" class="share clearfix">
+  <div data-url="http://blog.melface.tk/2014/07/18/皮肤+RSS+SITEMAP+评论/" data-title="皮肤+RSS+SITEMAP+评论 | Melface" data-tsina="1081487290" class="share clearfix">
   </div>
 
 </div>
@@ -130,19 +142,11 @@ $ hexo new 新的开始
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/07/09/正文语法/" title="正文Markdown语法">
-  <strong>上一篇：</strong><br/>
-  <span>
-  正文Markdown语法</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/07/09/hello-world/"  title="Hello World">
+<a href="/2014/07/16/发布到github/"  title="发布到github">
  <strong>下一篇：</strong><br/> 
- <span>Hello World
+ <span>发布到github
 </span>
 </a>
 </div>
@@ -161,7 +165,7 @@ $ hexo new 新的开始
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#替换皮肤"><span class="toc-number">1.</span> <span class="toc-text">替换皮肤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#评论系统"><span class="toc-number">2.</span> <span class="toc-text">评论系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RSS订阅"><span class="toc-number">3.</span> <span class="toc-text">RSS订阅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sitemap站长地图"><span class="toc-number">4.</span> <span class="toc-text">Sitemap站长地图</span></a></li></ol>
  
   </div>
 

@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.melface.tk/"/>
-  <updated>2014-07-18T06:21:00.674Z</updated>
+  <updated>2014-07-18T06:55:51.949Z</updated>
   <id>http://blog.melface.tk/</id>
   
   <author>
@@ -13,6 +13,49 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[皮肤+RSS+SITEMAP+评论]]></title>
+    <link href="http://blog.melface.tk/2014/07/18/%E7%9A%AE%E8%82%A4+RSS+SITEMAP+%E8%AF%84%E8%AE%BA/"/>
+    <id>http://blog.melface.tk/2014/07/18/皮肤+RSS+SITEMAP+评论/</id>
+    <published>2014-07-18T06:45:36.000Z</published>
+    <updated>2014-07-18T06:55:07.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="替换皮肤">替换皮肤</h2>
+<p>打开hexo的皮肤列表页面，你可以找到很多的皮肤，网页地址： <a href="https://github.com/tommy351/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/tommy351/hexo/wiki/Themes</a></p>
+<h2 id="评论系统">评论系统</h2>
+<p>我使用了多说评论系统，地址：<a href="http://duoshuo.com/" target="_blank" rel="external">http://duoshuo.com/</a><br>注册一个账号获得shortname，配置到_config.yml文件</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="attribute">duoshuo</span>: <span class="string"></span>
+  <span class="attribute">enable</span>: <span class="string">true</span>
+  <span class="attribute">short_name</span>: <span class="string">shorname</span>
+</pre></td></tr></table></figure>
+
+<p>另还可使用disqus,地址：<a href="http://disqus.com/" target="_blank" rel="external">http://disqus.com/</a></p>
+<h2 id="RSS订阅">RSS订阅</h2>
+<p>这个功能非常简单，因为已经有人写好了插件，我们只要安装插件就行了。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ npm install hexo<span class="attribute">-generator</span><span class="attribute">-feed</span>
+</pre></td></tr></table></figure>
+
+<h2 id="Sitemap站长地图">Sitemap站长地图</h2>
+<p>同样是一条命令，就可以完成。</p>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>npm install hexo<span class="attribute">-generator</span><span class="attribute">-sitemap</span>
+</pre></td></tr></table></figure>
+
+<p><br><br>至此，一个博客网站基本就建成啦！</p>
+]]></content>
+    
+    
+      <category term="hexo" scheme="http://blog.melface.tk/tags/hexo/"/>
+    
+      <category term="nodejs" scheme="http://blog.melface.tk/tags/nodejs/"/>
+    
+      <category term="IT" scheme="http://blog.melface.tk/categories/IT/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[发布到github]]></title>
