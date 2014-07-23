@@ -12,8 +12,7 @@
     <meta name="description" content="用HTML来做APP的界面，可以使界面更加的丰富多彩，开发起来也比较方便。在实现过程中遇到了以下2个问题：
 
 HTML如何调用后台IOS代码:   首先在接口中申明委托。1
-@interface WebViewController : UIViewController
-然后在初始化方法中添加委托关系">
+@interface WebViewController : UIViewController&amp;lt;UIWebViewDel">
     
     
     
@@ -91,7 +90,7 @@ HTML如何调用后台IOS代码:   首先在接口中申明委托。1
 		<p>用HTML来做APP的界面，可以使界面更加的丰富多彩，开发起来也比较方便。<br>在实现过程中遇到了以下2个问题：</p>
 <ul>
 <li>HTML如何调用后台IOS代码<br>:   首先在接口中申明委托。<br><figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="class"><span class="keyword">@interface</span> <span class="title">WebViewController</span> : <span class="title">UIViewController</span></span>
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">@interface</span> <span class="title">WebViewController</span> : <span class="title">UIViewController</span>&lt;<span class="title">UIWebViewDelegate</span>&gt;</span>
 </pre></td></tr></table></figure><br>然后在初始化方法中添加委托关系。<br><figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="keyword">self</span>.webView.<span class="keyword">delegate</span> = <span class="keyword">self</span>;
 </pre></td></tr></table></figure><br>最后实现委托中 shouldStartLoadWithRequest 方法, request提交前会出发此方法，因此判断 request 的值就可以调用不同的 ios 方法了。</li>
