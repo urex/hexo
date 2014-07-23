@@ -93,7 +93,7 @@ HTML如何调用后台IOS代码:   首先在接口中申明委托。1
 </pre></td><td class="code"><pre><span class="class"><span class="keyword">@interface</span> <span class="title">WebViewController</span> : <span class="title">UIViewController</span>&lt;<span class="title">UIWebViewDelegate</span>&gt;</span>
 </pre></td></tr></table></figure><br>然后在初始化方法中添加委托关系。<br><figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="keyword">self</span>.webView.<span class="keyword">delegate</span> = <span class="keyword">self</span>;
-</pre></td></tr></table></figure><br>最后实现委托中 shouldStartLoadWithRequest 方法, request提交前会出发此方法，因此判断 request 的值就可以调用不同的 ios 方法了。</li>
+</pre></td></tr></table></figure><br>最后实现委托中 shouldStartLoadWithRequest 方法, request提交前会触发此方法，因此通过判断 request 的值就可以调用不同的 ios 方法了。</li>
 </ul>
 <figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
 2

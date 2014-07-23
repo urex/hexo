@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.melface.tk/"/>
-  <updated>2014-07-23T04:03:40.445Z</updated>
+  <updated>2014-07-23T04:04:49.754Z</updated>
   <id>http://blog.melface.tk/</id>
   
   <author>
@@ -19,14 +19,14 @@
     <link href="http://blog.melface.tk/2014/07/23/%5Bios%5Dwebview%E6%8D%95%E8%8E%B7request%E5%8F%8A%E8%B0%83%E7%94%A8%E6%9C%AC%E5%9C%B0HTML/"/>
     <id>http://blog.melface.tk/2014/07/23/[ios]webview捕获request及调用本地HTML/</id>
     <published>2014-07-23T02:22:41.000Z</published>
-    <updated>2014-07-23T04:03:19.000Z</updated>
+    <updated>2014-07-23T04:04:44.000Z</updated>
     <content type="html"><![CDATA[<p>用HTML来做APP的界面，可以使界面更加的丰富多彩，开发起来也比较方便。<br>在实现过程中遇到了以下2个问题：</p>
 <ul>
 <li>HTML如何调用后台IOS代码<br>:   首先在接口中申明委托。<br><figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="class"><span class="keyword">@interface</span> <span class="title">WebViewController</span> : <span class="title">UIViewController</span>&lt;<span class="title">UIWebViewDelegate</span>&gt;</span>
 </pre></td></tr></table></figure><br>然后在初始化方法中添加委托关系。<br><figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="keyword">self</span>.webView.<span class="keyword">delegate</span> = <span class="keyword">self</span>;
-</pre></td></tr></table></figure><br>最后实现委托中 shouldStartLoadWithRequest 方法, request提交前会出发此方法，因此判断 request 的值就可以调用不同的 ios 方法了。</li>
+</pre></td></tr></table></figure><br>最后实现委托中 shouldStartLoadWithRequest 方法, request提交前会触发此方法，因此通过判断 request 的值就可以调用不同的 ios 方法了。</li>
 </ul>
 <figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
 2
