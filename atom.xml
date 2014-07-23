@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.melface.tk/"/>
-  <updated>2014-07-21T03:04:07.057Z</updated>
+  <updated>2014-07-23T03:57:11.448Z</updated>
   <id>http://blog.melface.tk/</id>
   
   <author>
@@ -13,6 +13,71 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[ios webview捕获request及调用本地HTML]]></title>
+    <link href="http://blog.melface.tk/2014/07/23/%5Bios%5Dwebview%E6%8D%95%E8%8E%B7request%E5%8F%8A%E8%B0%83%E7%94%A8%E6%9C%AC%E5%9C%B0HTML/"/>
+    <id>http://blog.melface.tk/2014/07/23/[ios]webview捕获request及调用本地HTML/</id>
+    <published>2014-07-23T02:22:41.000Z</published>
+    <updated>2014-07-23T03:55:53.000Z</updated>
+    <content type="html"><![CDATA[<p>用HTML来做APP的界面，可以使界面更加的丰富多彩，开发起来也比较方便。<br>在实现过程中遇到了以下2个问题：</p>
+<ul>
+<li>HTML如何调用后台IOS代码<br>:   首先在接口中申明委托。<br><figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">@interface</span> <span class="title">WebViewController</span> : <span class="title">UIViewController</span></span>
+</pre></td></tr></table></figure><br>然后在初始化方法中添加委托关系。<br><figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="keyword">self</span>.webView.<span class="keyword">delegate</span> = <span class="keyword">self</span>;
+</pre></td></tr></table></figure><br>最后实现委托中 shouldStartLoadWithRequest 方法, request提交前会出发此方法，因此判断 request 的值就可以调用不同的 ios 方法了。</li>
+</ul>
+<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre>- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    <span class="keyword">if</span>(condition){
+    	<span class="keyword">...</span>
+    	<span class="keyword">return</span> <span class="literal">TRUE</span>;
+    }<span class="keyword">else</span>{
+    	<span class="keyword">...</span>
+    	<span class="keyword">return</span> <span class="literal">FALSE</span>;
+    }
+    // 返回<span class="literal">TRUE</span>此request请求会被提交，返回<span class="literal">FALSE</span>则会忽略此request请求
+}
+</pre></td></tr></table></figure>
+
+<ul>
+<li>如何调用本地HTML<br>纯本地应用的话不需要网络，那就没必要去服务器打开HTML页面了，把页面放APP资源文件夹，直接打开就行了。<figure class="highlight {bash}"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="built_in">NSString</span> *filePath = [[<span class="built_in">NSBundle</span> mainBundle]pathForResource:@<span class="string">"fileName"</span> ofType:@<span class="string">"html"</span>];
+
+<span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> fileURLWithPath:filePath];
+
+<span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:url];
+
+[<span class="keyword">self</span><span class="variable">.webView</span> loadRequest:request];
+</pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    
+      <category term="ios" scheme="http://blog.melface.tk/tags/ios/"/>
+    
+      <category term="webview" scheme="http://blog.melface.tk/tags/webview/"/>
+    
+      <category term="IT" scheme="http://blog.melface.tk/categories/IT/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[皮肤+RSS+SITEMAP+评论]]></title>
